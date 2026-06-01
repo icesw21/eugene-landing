@@ -330,11 +330,14 @@ section { position: relative; }
   .hn-node.lbl-left  .t { right: calc(100% + 9px); }
   .hn-node.lbl-bottom .t,
   .hn-node.lbl-top .t { font-size: 9px; }
-}
-/* very narrow: drop the two longest labels to avoid horizontal overflow,
-   the dots + connecting line still carry the visual */
-@media (max-width: 460px) {
-  .hn-node.lbl-bottom .t { display: none; }
+  /* the bottom-labelled dots sit low in the band, so flip their labels above
+     the dot — keeps them inside the band and clear of the eyebrow below */
+  .hn-node.lbl-bottom .t {
+    top: auto;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /* Reveal utility ---------------------------------------------------------- */
