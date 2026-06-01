@@ -253,15 +253,17 @@ function initHeroNodes() {
   // 4. a glowing pulse travels from dot to dot, leading to "next"
   if (comet && comet.getTotalLength) {
     const len = comet.getTotalLength();
-    const seg = len * 0.12;                 // short bright segment
-    comet.style.strokeDasharray = `${seg} ${len}`;
-    comet.style.strokeDashoffset = len + seg;
+    const seg = len * 0.1;                       // short bright segment
+    // pattern period === path length, so as the pulse exits "next" the next
+    // one enters at "research" — a seamless, gap-free loop
+    comet.style.strokeDasharray = `${seg} ${len - seg}`;
+    comet.style.strokeDashoffset = len;
     animate(comet, {
-      strokeDashoffset: [len + seg, -seg],  // travels full journey, then repeats
-      duration: 2600,
+      strokeDashoffset: [len, 0],               // travel exactly one period
+      duration: 3400,
       delay: 2100,
       loop: true,
-      ease: 'inOut(1.4)',
+      ease: 'linear',                           // constant speed — no stop/start stutter
     });
   }
 
