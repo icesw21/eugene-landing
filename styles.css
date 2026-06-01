@@ -312,7 +312,28 @@ section { position: relative; }
 .hn-node.lbl-left  .t { right: calc(100% + 14px); }
 .hn-node.lbl-bottom .t { top: calc(100% + 12px); left: 50%; transform: translateX(-50%); }
 .hn-node.lbl-top .t { top: auto; bottom: calc(100% + 12px); left: 50%; transform: translateX(-50%); }
-@media (max-width: 900px) { .hero-nodes { display: none; } }
+/* mobile / narrow: keep the constellation, move it into the hero's empty
+   upper band and span it full-width so the zigzag reads horizontally */
+@media (max-width: 900px) {
+  .hero-nodes {
+    top: clamp(78px, 13vh, 150px);
+    left: var(--gut);
+    right: var(--gut);
+    width: auto;
+    height: clamp(108px, 17vh, 168px);
+  }
+  /* tighter labels so the edge nodes don't clip off-screen */
+  .hn-node .t { font-size: 10px; letter-spacing: 0.02em; }
+  .hn-node.lbl-right .t { left: calc(100% + 9px); }
+  .hn-node.lbl-left  .t { right: calc(100% + 9px); }
+  .hn-node.lbl-bottom .t,
+  .hn-node.lbl-top .t { font-size: 9px; }
+}
+/* very narrow: drop the two longest labels to avoid horizontal overflow,
+   the dots + connecting line still carry the visual */
+@media (max-width: 460px) {
+  .hn-node.lbl-bottom .t { display: none; }
+}
 
 /* Reveal utility ---------------------------------------------------------- */
 .reveal { opacity: 0; transform: translateY(28px); }
