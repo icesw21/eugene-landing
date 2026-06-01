@@ -1,0 +1,7 @@
+# OS / editor
+.DS_Store
+*.log
+
+# never publish source materials
+uploads/
+*.pdf

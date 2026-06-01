@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>박상우 — Connect the dots</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scroll-prog" id="scrollProg"></div>
+
+<div class="bg-layer" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-grain"></div>
+</div>
+
+<header class="site-head">
+  <a href="#top" class="mark"><span class="dot"></span>SANGWOO&nbsp;PARK</a>
+  <nav>
+    <a href="#path">CAREER</a>
+    <a href="#what">CAPABILITY</a>
+    <a href="#track">TRACK&nbsp;RECORD</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO ------------------------------------------------------------ -->
+  <section class="hero" data-screen-label="Hero">
+    <div class="hero-nodes" id="heroNodes" aria-hidden="true">
+      <svg class="hn-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <!-- the realized journey: an irregular zigzag through the four dots -->
+        <polyline class="hn-trace" points="6,32 24,80 50,20 71,62" fill="none"></polyline>
+        <!-- the final stroke reaching toward what's next -->
+        <line class="hn-future" x1="71" y1="62" x2="96" y2="36"></line>
+        <!-- traveling pulse that flows from dot to the next -->
+        <polyline class="hn-comet" points="6,32 24,80 50,20 71,62 96,36" fill="none"></polyline>
+      </svg>
+      <span class="hn-star s"  style="left:40%; top:13%"></span>
+      <span class="hn-star xs" style="left:61%; top:47%"></span>
+      <span class="hn-star xs" style="left:15%; top:56%"></span>
+      <span class="hn-star xs" style="left:85%; top:14%"></span>
+      <span class="hn-star xs" style="left:33%; top:44%"></span>
+      <div class="hn-node lbl-right"  style="left:6%;  top:32%"><span class="g"></span><span class="t">research</span></div>
+      <div class="hn-node lbl-bottom" style="left:24%; top:80%"><span class="g"></span><span class="t">IPO &amp; ECM</span></div>
+      <div class="hn-node lbl-right"  style="left:50%; top:20%"><span class="g"></span><span class="t">startup · CSO</span></div>
+      <div class="hn-node lbl-bottom" style="left:71%; top:62%"><span class="g"></span><span class="t">alternative investment</span></div>
+      <div class="hn-node next lbl-left" style="left:96%; top:36%"><span class="g"></span><span class="t">next</span></div>
+    </div>
+    <div class="wrap">
+      <span class="eyebrow hero-eyebrow"><span class="idx">001</span>&nbsp;/&nbsp;대체투자 운용역 · 박상우</span>
+      <h1 id="heroTitle">Connect<br>the <em class="em">dots.</em></h1>
+      <div class="hero-row">
+        <p class="hero-lede reveal">
+          흩어져 보이던 경험들이 하나의 선이 됩니다. <b>리서치 · IPO · 창업, 그리고 대체투자</b>까지 —
+          자본시장의 발행시장과 유통시장, 그 사이의 모든 점을 직접 잇는 운용역.
+        </p>
+        <div class="hero-meta reveal">
+          <div><span class="k">BASE</span>&nbsp;&nbsp;Seoul, KR</div>
+          <div><span class="k">NOW</span>&nbsp;&nbsp;&nbsp;브레인자산운용</div>
+          <div><span class="k">SINCE</span>&nbsp;2016</div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span class="bar"></span>SCROLL TO CONNECT</div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO ------------------------------------------------------- -->
+  <section class="manifesto section-pad" id="why" data-screen-label="Manifesto">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="idx">002</span>&nbsp;/&nbsp;philosophy</span>
+      <blockquote class="reveal" style="margin-top:34px">
+        점은 앞을 향해 연결할 수 없다.<br>오직 <em class="em">되돌아볼 때</em>에만 이어진다.
+      </blockquote>
+      <div class="by reveal">— Steve Jobs, Stanford 2005 의 'Connect the dots' 에서</div>
+      <p class="ko-note reveal">
+        증권사, 창업, 자산운용까지. 서로 무관해 보이는 경력이지만 사소한 모든 순간이 자산이 되어
+        지금의 '나'를 설명하는 필수불가결한 요소가 되었습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- TIMELINE -------------------------------------------------------- -->
+  <section class="timeline section-pad" id="path" data-screen-label="Career timeline">
+    <div class="wrap">
+      <div class="shead">
+        <span class="eyebrow reveal"><span class="idx">003</span>&nbsp;/&nbsp;the dots</span>
+        <h2 class="reveal">자본시장의 모든 축을<br>지나온 <em class="em">네 개의 점</em>.</h2>
+      </div>
+
+      <div class="tl-grid" id="tlGrid">
+        <div class="tl-rail" id="tlRail">
+          <svg viewBox="0 0 2 100" preserveAspectRatio="none">
+            <line class="track" x1="1" y1="0" x2="1" y2="100" stroke-width="2"></line>
+            <line class="prog" id="tlProg" x1="1" y1="0" x2="1" y2="100" stroke-width="2"
+                  stroke-dasharray="100" stroke-dashoffset="100"></line>
+          </svg>
+        </div>
+
+        <article class="tl-node reveal">
+          <div class="tl-when"><span class="yr">2016 — 2019</span>신한투자증권<br>리서치센터 · 글로벌사업부</div>
+          <div class="tl-body">
+            <h3>기본기를 다진 첫 3년</h3>
+            <span class="role">Research Associate</span>
+            <p>유통·의류 산업 애널리스트를 보좌하는 RA로 산업·기업 분석과 실적 추정 모형(Earnings Model)을 익혔습니다.
+               신세계·이마트·CJ ENM·한섬·영원무역 등을 커버하며 Financial Modeling 실무와 재무 분석 툴을 체득했습니다.</p>
+            <div class="tl-tags"><span>상대가치평가</span><span>Earnings Model</span><span>Bloomberg</span><span>QuantiWise</span></div>
+          </div>
+        </article>
+
+        <article class="tl-node reveal">
+          <div class="tl-when"><span class="yr">2019 — 2022</span>KB증권<br>ECM 본부 · 과장</div>
+          <div class="tl-body">
+            <h3>발행시장으로의 전환, IPO PM</h3>
+            <span class="role">IPO Project Manager</span>
+            <p>제안서 작성부터 실사·수요예측·상장까지 IPO 전 과정을 총괄하는 메인 PM. 일반상장·기술특례·SPAC 합병·리츠까지
+               다양한 형태의 상장을 직·간접적으로 수행했고, 대표주관 연계 Pre-IPO 투자 및 심사보고서를 작성했습니다.</p>
+            <div class="tl-tags"><span>카카오뱅크</span><span>롯데렌탈</span><span>솔루엠</span><span>단독대표주관</span><span>Pre-IPO 심사</span></div>
+          </div>
+        </article>
+
+        <article class="tl-node reveal">
+          <div class="tl-when"><span class="yr">2022 — 2024</span>퓨쳐리즘랩스<br>공동창업 · CSO</div>
+          <div class="tl-body">
+            <h3>바닥부터, 창업자의 길</h3>
+            <span class="role">Co-founder / CSO</span>
+            <p>가상자산 알고리즘 트레이딩 스타트업을 공동창업해 경영관리와 자금조달을 총괄했습니다. 창업 10개월 만에
+               중기부·인포뱅크 등으로부터 시드 3억원을 유치하고, Seed-TIPS·TIPS로 정부지원금 5억원+를 확보했습니다.</p>
+            <div class="tl-tags"><span>시드 3억원</span><span>TIPS 5억+</span><span>AUM 20억+</span><span>IR</span><span>R&amp;D 총책임</span></div>
+          </div>
+        </article>
+
+        <article class="tl-node reveal">
+          <div class="tl-when"><span class="yr">2024 — 현재</span>브레인자산운용<br>케이와이PE · 수석심사역</div>
+          <div class="tl-body">
+            <h3>대체투자 운용역, 그리고 지금</h3>
+            <span class="role">Alternative Investment</span>
+            <p>유통·발행시장과 창업 경험을 레버리지 삼아, 구조화 증권과 비상장주식의 딜 소싱부터 투자 검토·집행, 사후관리,
+               회수까지 대체투자의 전 과정에 참여하고 있습니다. 연기금·공제회·캐피탈 등 LP 마케팅도 직접 수행합니다.</p>
+            <div class="tl-tags"><span>딜 소싱</span><span>구조화 증권</span><span>비상장 투자</span><span>사후관리·회수</span><span>LP 마케팅</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITY ------------------------------------------------------ -->
+  <section class="caps section-pad" id="what" data-screen-label="Capability">
+    <div class="wrap">
+      <div class="shead">
+        <span class="eyebrow reveal"><span class="idx">004</span>&nbsp;/&nbsp;capability</span>
+        <h2 class="reveal">소싱에서 회수까지,<br><em class="em">전 과정</em>을 직접 책임집니다.</h2>
+      </div>
+      <div class="cap-grid">
+        <div class="cap reveal">
+          <span class="no">/ 01</span>
+          <h3>대체투자 <em class="em">운용</em></h3>
+          <p>구조화 증권(CB·EB·BW·CPS)과 비상장주식 딜 소싱부터 투자 검토·집행, 사후관리, 회수까지 전 과정 수행.</p>
+        </div>
+        <div class="cap reveal">
+          <span class="no">/ 02</span>
+          <h3>IPO · <em class="em">Pre-IPO 심사</em></h3>
+          <p>증권사 IPO PM 출신으로 상장예정기업 실사 및 Pre-IPO 투자 심사 경험 다수. 발행시장의 구조를 안에서 이해합니다.</p>
+        </div>
+        <div class="cap reveal">
+          <span class="no">/ 03</span>
+          <h3>재무 <em class="em">모델링</em></h3>
+          <p>리서치에서 숙달한 상대가치평가·DCF·Earnings Model 작성 및 검토 능력. 숫자로 투자 논리를 세웁니다.</p>
+        </div>
+        <div class="cap reveal">
+          <span class="no">/ 04</span>
+          <h3>자본 조달 · <em class="em">IR</em></h3>
+          <p>스타트업 공동창업자로서 VC·기관 투자 유치와 IR을 직접 경험. 투자받는 쪽과 투자하는 쪽을 모두 압니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACK RECORD ---------------------------------------------------- -->
+  <section class="track section-pad" id="track" data-screen-label="Track record">
+    <div class="wrap">
+      <div class="shead">
+        <span class="eyebrow reveal"><span class="idx">005</span>&nbsp;/&nbsp;track record</span>
+        <h2 class="reveal">브레인자산운용<br>대체운용 <em class="em">실적 요약</em>.</h2>
+      </div>
+      <div class="stat-grid">
+        <div class="stat reveal">
+          <div class="num" data-count="22" data-suffix="">0</div>
+          <div class="lab">투자 집행 건수<br>DEALS EXECUTED</div>
+        </div>
+        <div class="stat reveal">
+          <div class="num" data-count="1085" data-suffix="억">0<span class="u">억</span></div>
+          <div class="lab">누적 투자원금<br>CAPITAL DEPLOYED</div>
+        </div>
+        <div class="stat reveal">
+          <div class="num" data-count="1.26" data-decimals="2" data-suffix="x">0<span class="u">x</span></div>
+          <div class="lab">가중 Multiple<br>(공정가치 기준)</div>
+        </div>
+        <div class="stat reveal">
+          <div class="num" data-count="6" data-suffix="+">0<span class="u">+</span></div>
+          <div class="lab">투자 형태<br>CB · EB · CPS · BW · 비상장</div>
+        </div>
+      </div>
+      <p class="lp reveal">
+        <b>LP 마케팅 · 네트워킹</b> — 농협중앙회, MG새마을금고중앙회, 우리투자증권, KB캐피탈, NH캐피탈 등
+        주요 출자기관 대상 마케팅을 수행하고 출자를 유치했습니다.
+      </p>
+      <p class="note reveal">* 공정가치 2026.03.31 기준 · 가중 Multiple = (회수금 + 공정가치) / 투자원금 · 내부 집계 기준</p>
+    </div>
+  </section>
+
+  <!-- IPO MARQUEE ----------------------------------------------------- -->
+  <section class="ipo section-pad" id="ipo" data-screen-label="IPO deals">
+    <div class="wrap">
+      <div class="shead">
+        <span class="eyebrow reveal"><span class="idx">006</span>&nbsp;/&nbsp;selected IPOs · KB증권</span>
+        <h2 class="reveal">메인 PM으로 함께한<br><em class="em">상장</em>의 순간들.</h2>
+      </div>
+    </div>
+
+    <div class="marquee-track">
+      <div class="marquee" data-marquee data-dir="1">
+        <span class="mq-item">카카오뱅크 <span class="amt">2조 5,526억</span> <span class="star">✳</span></span>
+        <span class="mq-item">롯데렌탈 <span class="amt">8,509억</span> <span class="star">✳</span></span>
+        <span class="mq-item">솔루엠 <span class="amt">1,088억</span> <span class="star">✳</span></span>
+        <span class="mq-item">롯데리츠 <span class="amt">3,333억</span> <span class="star">✳</span></span>
+        <span class="mq-item">카카오뱅크 <span class="amt">2조 5,526억</span> <span class="star">✳</span></span>
+        <span class="mq-item">롯데렌탈 <span class="amt">8,509억</span> <span class="star">✳</span></span>
+        <span class="mq-item">솔루엠 <span class="amt">1,088억</span> <span class="star">✳</span></span>
+        <span class="mq-item">롯데리츠 <span class="amt">3,333억</span> <span class="star">✳</span></span>
+      </div>
+    </div>
+    <div class="marquee-track">
+      <div class="marquee" data-marquee data-dir="-1">
+        <span class="mq-item muted">리파인 <span class="amt">909억 · 단독대표주관</span> <span class="star">✳</span></span>
+        <span class="mq-item muted">플레이디 <span class="amt">314억</span> <span class="star">✳</span></span>
+        <span class="mq-item muted">산돌 <span class="amt">280억 · 단독대표주관</span> <span class="star">✳</span></span>
+        <span class="mq-item muted">옵티코어 <span class="amt">SPAC 합병</span> <span class="star">✳</span></span>
+        <span class="mq-item muted">리파인 <span class="amt">909억 · 단독대표주관</span> <span class="star">✳</span></span>
+        <span class="mq-item muted">플레이디 <span class="amt">314억</span> <span class="star">✳</span></span>
+        <span class="mq-item muted">산돌 <span class="amt">280억 · 단독대표주관</span> <span class="star">✳</span></span>
+        <span class="mq-item muted">옵티코어 <span class="amt">SPAC 합병</span> <span class="star">✳</span></span>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <p class="cap-line reveal">
+        IT서비스·게임·보안 등 다양한 산업군을 대상으로 IPO 제안서를 작성했고, 카카오페이·크래프톤·시몬느·SK쉴더스·
+        CJ올리브영·컬리 등 상장유망기업 대상 제안 영업을 수행했습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOUNDER STORY --------------------------------------------------- -->
+  <section class="story section-pad" id="story" data-screen-label="Founder story">
+    <div class="wrap">
+      <div class="shead">
+        <span class="eyebrow reveal"><span class="idx">007</span>&nbsp;/&nbsp;the detour that mattered</span>
+      </div>
+      <div class="story-grid">
+        <div class="reveal">
+          <p class="pull">“100년 인생에서 <em class="em">2년</em>,<br>인생의 2% 정도는<br>걸어봐도 괜찮다고<br>생각했습니다.”</p>
+        </div>
+        <div class="story-body reveal">
+          <p>성장성 있는 산업에 직접 투신하겠다는 결심으로, 안정적인 현금흐름 대신 창업을 택했습니다.
+             <b>뜻이 통하는 지인들과 함께</b> 가상자산 알고리즘 트레이딩 스타트업을 공동창업했습니다.</p>
+          <p>테라-루나 사태와 FTX 파산으로 투자심리가 얼어붙은 시기였지만, 핀테크 펀드를 집중 공략하는 전략적 IR로
+             기술력을 인정받고 투자를 유치했습니다. 비개발자 출신임에도 사내 미니 개발 프로젝트와 KAIST MBA로
+             개발 이해도를 높여 <b>TIPS 과제의 총책임자</b>로 R&amp;D를 통할했습니다.</p>
+          <p>현금흐름을 창출하는 사업모델을 끝내 구축하지 못한 점에서 실패를 인정했지만, 그 2년은 지금의 운용역을
+             설명하는 가장 중요한 점이 되었습니다.</p>
+          <div class="figs">
+            <div class="fig"><div class="n">3억+</div><div class="l">SEED 투자 유치</div></div>
+            <div class="fig"><div class="n">5억+</div><div class="l">TIPS 정부지원금</div></div>
+            <div class="fig"><div class="n">20억+</div><div class="l">AUM 달성</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS ----------------------------------------------------- -->
+  <section class="creds section-pad" id="creds" data-screen-label="Credentials">
+    <div class="wrap">
+      <div class="shead">
+        <span class="eyebrow reveal"><span class="idx">008</span>&nbsp;/&nbsp;credentials</span>
+        <h2 class="reveal">학력 · 자격 · <em class="em">스킬</em>.</h2>
+      </div>
+      <div class="cred-grid">
+        <div class="cred-col reveal">
+          <h4>Education</h4>
+          <ul>
+            <li><span class="t">KAIST 디지털금융 MBA</span><span class="s">2023–2025</span></li>
+            <li><span class="t">서울대학교 경제학 학사</span><span class="s">2010–2017</span></li>
+            <li><span class="t">인천외국어고 영·일본어과</span><span class="s">2007–2010</span></li>
+          </ul>
+        </div>
+        <div class="cred-col reveal">
+          <h4>Certifications · Language</h4>
+          <ul>
+            <li><span class="t">CFA Level 1</span><span class="s">CFA Institute</span></li>
+            <li><span class="t">투자자산운용사</span><span class="s">금융투자협회</span></li>
+            <li><span class="t">영어 · Business</span><span class="s">TOEIC 965 / TOEFL 109</span></li>
+            <li><span class="t">일본어 · Business</span><span class="s">JLPT N1</span></li>
+          </ul>
+        </div>
+        <div class="cred-col reveal">
+          <h4>Tools</h4>
+          <div class="skill-chips">
+            <span>Python</span><span>Bloomberg</span><span>QuantiWise</span><span>DataGuide</span>
+            <span>Excel</span><span>PowerPoint</span><span>Claude Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT --------------------------------------------------------- -->
+  <section class="contact section-pad" id="contact" data-screen-label="Contact">
+    <div class="wrap">
+      <span class="eyebrow reveal"><span class="idx">009</span>&nbsp;/&nbsp;next dot</span>
+      <h2 class="reveal" style="margin-top:30px">Connect the<br><em class="em">next dot.</em></h2>
+      <div class="contact-row">
+        <a class="cta-btn" href="mailto:icesw21@gmail.com">이메일 보내기 <span>↗</span></a>
+        <div class="contact-links reveal">
+          <a href="mailto:icesw21@gmail.com"><span class="k">EMAIL</span><span class="v">icesw21@gmail.com</span></a>
+          <a href="https://www.linkedin.com/in/sangwoo-park-029b47119/" target="_blank" rel="noopener"><span class="k">LINKEDIN</span><span class="v">/in/sangwoo-park</span></a>
+          <span><span class="k">BASE</span><span class="v">Seoul, Republic of Korea</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>© 2026 PARK SANGWOO · 박상우</span>
+  </footer>
+
+</main>
+
+<!-- Tweaks panel -->
+<aside class="tweaks" id="tweaks" aria-hidden="true">
+  <div class="th">
+    <h5>Tweaks</h5>
+    <button id="tweaksClose" aria-label="close">✕</button>
+  </div>
+  <div class="grp">
+    <label>Accent</label>
+    <div class="swatches" id="twAccent">
+      <button data-c="#ff5a3c" style="background:#ff5a3c" title="Coral"></button>
+      <button data-c="#c8ff3c" style="background:#c8ff3c" title="Lime"></button>
+      <button data-c="#3c9cff" style="background:#3c9cff" title="Blue"></button>
+      <button data-c="#d4b483" style="background:#d4b483" title="Gold"></button>
+      <button data-c="#e8e6e3" style="background:#e8e6e3" title="Bone"></button>
+    </div>
+  </div>
+  <div class="grp">
+    <label>Background</label>
+    <div class="seg" id="twBg">
+      <button data-bg="#100f0d" data-bg2="#15130f">Warm</button>
+      <button data-bg="#0a0a0b" data-bg2="#101013">Ink</button>
+      <button data-bg="#0c100e" data-bg2="#111613">Forest</button>
+    </div>
+  </div>
+  <div class="grp">
+    <label>Grid texture</label>
+    <div class="seg" id="twGrid">
+      <button data-grid="on">On</button>
+      <button data-grid="off">Off</button>
+    </div>
+  </div>
+</aside>
+
+<script>
+const TWEAKS = /*EDITMODE-BEGIN*/{
+  "accent": "#c8ff3c",
+  "bg": "#100f0d",
+  "bg2": "#15130f",
+  "grid": "on"
+}/*EDITMODE-END*/;
+
+(function () {
+  const root = document.documentElement;
+  const panel = document.getElementById('tweaks');
+
+  function apply(t) {
+    root.style.setProperty('--accent', t.accent);
+    root.style.setProperty('--bg', t.bg);
+    root.style.setProperty('--bg-2', t.bg2);
+    const grid = document.querySelector('.bg-grid');
+    if (grid) grid.style.display = (t.grid === 'off') ? 'none' : '';
+    // reflect selection state
+    document.querySelectorAll('#twAccent button').forEach((b) =>
+      b.classList.toggle('sel', b.dataset.c.toLowerCase() === t.accent.toLowerCase()));
+    document.querySelectorAll('#twBg button').forEach((b) =>
+      b.classList.toggle('sel', b.dataset.bg.toLowerCase() === t.bg.toLowerCase()));
+    document.querySelectorAll('#twGrid button').forEach((b) =>
+      b.classList.toggle('sel', b.dataset.grid === t.grid));
+  }
+
+  function persist(edits) {
+    Object.assign(TWEAKS, edits);
+    apply(TWEAKS);
+    try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*'); } catch (e) {}
+  }
+
+  apply(TWEAKS);
+
+  document.getElementById('twAccent').addEventListener('click', (e) => {
+    const b = e.target.closest('button'); if (!b) return; persist({ accent: b.dataset.c });
+  });
+  document.getElementById('twBg').addEventListener('click', (e) => {
+    const b = e.target.closest('button'); if (!b) return; persist({ bg: b.dataset.bg, bg2: b.dataset.bg2 });
+  });
+  document.getElementById('twGrid').addEventListener('click', (e) => {
+    const b = e.target.closest('button'); if (!b) return; persist({ grid: b.dataset.grid });
+  });
+
+  // Host protocol — listener first, then announce
+  window.addEventListener('message', (e) => {
+    const t = e.data && e.data.type;
+    if (t === '__activate_edit_mode') { panel.classList.add('on'); panel.setAttribute('aria-hidden', 'false'); }
+    else if (t === '__deactivate_edit_mode') { panel.classList.remove('on'); panel.setAttribute('aria-hidden', 'true'); }
+  });
+  document.getElementById('tweaksClose').addEventListener('click', () => {
+    panel.classList.remove('on'); panel.setAttribute('aria-hidden', 'true');
+    try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch (e) {}
+  });
+  try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch (e) {}
+})();
+</script>
+
+<script type="module" src="animations.js"></script>
+</body>
+</html>
