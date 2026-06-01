@@ -312,15 +312,17 @@ section { position: relative; }
 .hn-node.lbl-left  .t { right: calc(100% + 14px); }
 .hn-node.lbl-bottom .t { top: calc(100% + 12px); left: 50%; transform: translateX(-50%); }
 .hn-node.lbl-top .t { top: auto; bottom: calc(100% + 12px); left: 50%; transform: translateX(-50%); }
-/* mobile / narrow: keep the constellation, move it into the hero's empty
-   upper band and span it full-width so the zigzag reads horizontally */
+/* mobile / narrow: keep the constellation, but put it in normal flow so it
+   reserves its own band at the top — absolute positioning let it overlap the
+   bottom-aligned text whenever the viewport (svh) was short (e.g. iOS Safari) */
 @media (max-width: 900px) {
+  .hero { justify-content: space-between; }
   .hero-nodes {
-    top: clamp(78px, 13vh, 150px);
-    left: var(--gut);
-    right: var(--gut);
-    width: auto;
-    height: clamp(108px, 17vh, 168px);
+    position: relative;          /* still contains its absolute children */
+    top: auto; left: auto; right: auto;
+    width: 100%;
+    height: clamp(150px, 22vh, 210px);
+    flex: 0 0 auto;
   }
   /* tighter labels so the edge nodes don't clip off-screen */
   .hn-node .t { font-size: 10px; letter-spacing: 0.02em; }
